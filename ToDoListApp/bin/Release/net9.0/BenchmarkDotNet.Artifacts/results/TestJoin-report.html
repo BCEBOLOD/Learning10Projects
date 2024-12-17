@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>TestJoin-20241201-225616</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.14.0, Windows 10 (10.0.19045.5198/22H2/2022Update)
+Intel Core i5-4440 CPU 3.10GHz (Haswell), 1 CPU, 4 logical and 4 physical cores
+.NET SDK 9.0.100-rc.2.24474.11
+  [Host]     : .NET 9.0.0 (9.0.24.47305), X64 RyuJIT AVX2
+  DefaultJob : .NET 9.0.0 (9.0.24.47305), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Gen0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Join</td><td>35.36 ns</td><td>0.400 ns</td><td>0.375 ns</td><td>0.0255</td><td>80 B</td>
+</tr><tr><td>plusPlus</td><td>59.95 ns</td><td>0.351 ns</td><td>0.311 ns</td><td>0.0509</td><td>160 B</td>
+</tr></tbody></table>
+</body>
+</html>
